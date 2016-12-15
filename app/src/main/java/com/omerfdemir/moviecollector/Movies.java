@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -44,6 +46,14 @@ public class Movies extends AppCompatActivity{
             lv.setAdapter(adapter);
 
         }
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0,View arg1, int arg2, long arg3) {
+                Intent intent = new Intent(getApplicationContext(),SingleMovie.class);
+                intent.putExtra("movie_id",movie_ids[arg2]);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

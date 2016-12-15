@@ -33,6 +33,7 @@ public class Categories extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
+        setTitle("Categories");
 
     }
 
@@ -41,26 +42,26 @@ public class Categories extends AppCompatActivity {
         super.onResume();
         Database movies_db = new Database(getApplicationContext());
         category_list = movies_db.categories();
-        if (category_list.size() == 0) {
-            Toast.makeText(getApplicationContext(), "There is no Database", Toast.LENGTH_LONG).show();
-        } else {
-            category_names = new String[category_list.size()];
-            category_ids = new int[category_list.size()];
-            for (int i = 0; i < category_list.size(); i++) {
-                category_names[i] = category_list.get(i).get("Genre");
-                category_ids[i] = Integer.parseInt(category_list.get(i).get("genre_id"));
-            }
-            lv2 = (ListView) findViewById(R.id.categories);
-            adapter2 = new ArrayAdapter<String>(this,R.layout.list_item_2,R.id.li_tv2,category_names);
-            lv2.setAdapter(adapter2);
+    if (category_list.size() == 0) {
+        Toast.makeText(getApplicationContext(), "There is no Database", Toast.LENGTH_LONG).show();
+    } else {
+        category_names = new String[category_list.size()];
+        category_ids = new int[category_list.size()];
+        for (int i = 0; i < category_list.size(); i++) {
+            category_names[i] = category_list.get(i).get("Genre");
+            category_ids[i] = Integer.parseInt(category_list.get(i).get("genre_id"));
         }
-        lv2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> arg0,View arg1, int arg2, long arg3) {
-                Intent intent = new Intent(getApplicationContext(),Movies.class);
-                intent.putExtra("genre_id",category_ids[arg2]);
-                startActivity(intent);
-            }
-        });
+        lv2 = (ListView) findViewById(R.id.categories);
+        adapter2 = new ArrayAdapter<String>(this,R.layout.list_item_2,R.id.li_tv2,category_names);
+        lv2.setAdapter(adapter2);
     }
+    lv2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        public void onItemClick(AdapterView<?> arg0,View arg1, int arg2, long arg3) {
+            Intent intent = new Intent(getApplicationContext(),Movies.class);
+            intent.putExtra("genre_id",category_ids[arg2]);
+            startActivity(intent);
+        }
+    });
+}
 
 }
