@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.omerfdemir.moviecollector">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.omerfdemir.moviecollector.Categories"
+            android:label="@string/app_name"
+            android:parentActivityName=".Categories"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.omerfdemir.moviecollector.SingleMovie"
+            android:label="@string/app_name"
+            android:parentActivityName=".SingleMovie"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.omerfdemir.moviecollector.Movies"
+            android:label="@string/app_name"
+            android:parentActivityName=".Movies"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.omerfdemir.moviecollector.Toplist"
+            android:label="@string/app_name"
+            android:parentActivityName=".Toplist"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.omerfdemir.moviecollector.LatestMovies"
+            android:label="@string/app_name"
+            android:parentActivityName=".LatestMovies"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.omerfdemir.moviecollector.Years"
+            android:label="@string/app_name"
+            android:parentActivityName=".Years"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.omerfdemir.moviecollector.Directors"
+            android:label="@string/app_name"
+            android:parentActivityName=".Directors"
+            android:screenOrientation="portrait">
+        </activity>
+
+    </application>
+
+</manifest>
