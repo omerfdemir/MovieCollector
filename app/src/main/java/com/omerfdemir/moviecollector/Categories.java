@@ -59,6 +59,7 @@ public class Categories extends AppCompatActivity {
         public void onItemClick(AdapterView<?> arg0,View arg1, int arg2, long arg3) {
             Intent intent = new Intent(getApplicationContext(),Movies.class);
             intent.putExtra("genre_id",category_ids[arg2]);
+            intent.putExtra("genre",category_names[arg2]);
             startActivity(intent);
         }
     });

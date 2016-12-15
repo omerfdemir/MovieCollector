@@ -24,6 +24,7 @@ public class Toplist extends AppCompatActivity{
     ArrayList<HashMap<String, String>> top_list;
     String[] movie_names;
     int[] movie_ids;
+    String [] imdb_score;
     ListView lv3;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class Toplist extends AppCompatActivity{
             movie_names = new String[top_list.size()];
             movie_ids = new int[top_list.size()];
             for (int i =0 ; i < top_list.size() ; i++){
-                movie_names[i]=top_list.get(i).get("Name");
+                movie_names[i]=top_list.get(i).get("Name") +" - "  + top_list.get(i).get("imdb_score");
                 movie_ids[i] = Integer.parseInt(top_list.get(i).get("movie_id"));
             }
             lv3 = (ListView) findViewById(R.id.toplist);
