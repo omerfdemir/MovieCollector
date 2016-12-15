@@ -3,11 +3,29 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_d26b5ac5b69f11037aa270e625fbe247653f3b64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_f2512045fff12b1e67011fd38216eb3b05337a72\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="cad99291bd2e3640fe1931a55084eae959ace483">
+        sha1="b559dca67a73e55c987fc9a505ce80af8b868504">
         <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_acf7cb1b03d647c958f1ee3519ae2c8165bf5f3c\classes.dex" />
     </item>
     <item
@@ -48,123 +66,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_c9193f3372b456e3e6c36b62e1928ccdd32bc458\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_fc1e309862ef83bb17543fbdd454b6f31cf0de43\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_6f26c3e0db1f98b123a3f49f5465e012916c826e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_836581298a745f3ff1641e7aa77a0de7e7dd003d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_d2b41118c1964a62f5c286c977fc9dfca728067e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="40a49713d8d738df85bed5856788dabf4b67a40b">
-        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_374ee855b50092c705298a124c32defd8a5921a1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_cce93f4db6713a39be556748d7016e27c24c5889\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_6f621a4d2316ea2a6cf7ba1f4cfb70de1ed54f71\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_84b44fbcfde28ca776dd621abf053d36efef986e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_0482ec8e1951d6a217b7deb32d99a1623f89fed1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_bb1bf14ad6d4738110578679a085835805c90155\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_d26b5ac5b69f11037aa270e625fbe247653f3b64\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_f2512045fff12b1e67011fd38216eb3b05337a72\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -180,6 +81,15 @@
         revision="24.0.1"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
         <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_ab22e6973bc61d805542c18652ec2e5c10418da4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_c9193f3372b456e3e6c36b62e1928ccdd32bc458\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -219,6 +129,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_fc1e309862ef83bb17543fbdd454b6f31cf0de43\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_6f26c3e0db1f98b123a3f49f5465e012916c826e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -228,12 +156,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_836581298a745f3ff1641e7aa77a0de7e7dd003d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_d2b41118c1964a62f5c286c977fc9dfca728067e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
         <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_6636a654a656143de87098e8915f70b72cac0952\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="40a49713d8d738df85bed5856788dabf4b67a40b">
+        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_374ee855b50092c705298a124c32defd8a5921a1\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -273,12 +228,57 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_cce93f4db6713a39be556748d7016e27c24c5889\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_6f621a4d2316ea2a6cf7ba1f4cfb70de1ed54f71\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_84b44fbcfde28ca776dd621abf053d36efef986e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_ae6fd89de60405e947b44973202801b910666294\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\omerf\Desktop\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_0482ec8e1951d6a217b7deb32d99a1623f89fed1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_bb1bf14ad6d4738110578679a085835805c90155\classes.dex" />
     </item>
     <item
         is-multidex="true"
