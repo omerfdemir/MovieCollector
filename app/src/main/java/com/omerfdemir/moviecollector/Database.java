@@ -58,7 +58,7 @@ public class Database extends android.database.sqlite.SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-    } public ArrayList<HashMap<String, String>> allMovies(int genre_id) {
+    } public ArrayList<HashMap<String, String>> categorytoMovies(int genre_id) {
         SQLiteDatabase movies_db = this.getReadableDatabase();
         String selectQuery = "SELECT NAME,MOVIE_ID FROM " + TABLE_MOVIES + " WHERE genre_id = " + genre_id + " ORDER BY NAME";
 
@@ -172,7 +172,7 @@ public class Database extends android.database.sqlite.SQLiteOpenHelper{
     }
     public ArrayList<HashMap<String, String>> directortoMovies(int director_id) {
         SQLiteDatabase movies_db = this.getReadableDatabase();
-        String selectQuery = "SELECT NAME,MOVIE_ID FROM " + TABLE_MOVIES + " WHERE director_id = " + director_id + " ORDER BY NAME";
+        String selectQuery = "SELECT DISTINCT NAME,MOVIE_ID FROM " + TABLE_MOVIES + " WHERE director_id = " + director_id + " ORDER BY NAME";
 
         Cursor cursor = movies_db.rawQuery(selectQuery, null);
         ArrayList<HashMap<String, String>> movieList = new ArrayList<HashMap<String, String>>();
@@ -189,6 +189,97 @@ public class Database extends android.database.sqlite.SQLiteOpenHelper{
         }
         movies_db.close();
         return movieList;
+
+    }
+    public ArrayList<HashMap<String, String>> yearList() {
+        SQLiteDatabase movies_db = this.getReadableDatabase();
+        String selectQuery = "SELECT * FROM YEARS ORDER BY YEAR_ID"  ;
+
+        Cursor cursor2 = movies_db.rawQuery(selectQuery, null);
+        ArrayList<HashMap<String, String>> year_list = new ArrayList<HashMap<String, String>>();
+
+        if (cursor2 != null && cursor2.moveToFirst()) {
+            do {
+                HashMap<String, String> map2 = new HashMap<String, String>();
+                for (int i = 0; i < cursor2.getColumnCount(); i++) {
+                    map2.put(cursor2.getColumnName(i), cursor2.getString(i));
+                }
+                year_list.add(map2);
+            } while (cursor2.moveToNext());
+        }
+        movies_db.close();
+        return year_list;
+
+    }
+    public ArrayList<HashMap<String, String>> yeartoMovies(int year_id) {
+        SQLiteDatabase movies_db = this.getReadableDatabase();
+        String selectQuery = "SELECT DISTINCT NAME,MOVIE_ID FROM " + TABLE_MOVIES + " WHERE year_id = " + year_id + " ORDER BY NAME";
+
+        Cursor cursor = movies_db.rawQuery(selectQuery, null);
+        ArrayList<HashMap<String, String>> movieList = new ArrayList<HashMap<String, String>>();
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                HashMap<String, String> map = new HashMap<String, String>();
+                for (int i = 0; i < cursor.getColumnCount(); i++) {
+                    map.put(cursor.getColumnName(i), cursor.getString(i));
+                }
+                movieList.add(map);
+            } while (cursor.moveToNext());
+
+        }
+        movies_db.close();
+        return movieList;
+
+    }
+    public ArrayList<HashMap<String, String>> latestMovies() {
+        SQLiteDatabase movies_db = this.getReadableDatabase();
+        String selectQuery = "SELECT DISTINCT NAME,MOVIE_ID FROM " + TABLE_MOVIES + " WHERE year_id = 9 ORDER BY NAME LIMIT 0,20";
+
+        Cursor cursor = movies_db.rawQuery(selectQuery, null);
+        ArrayList<HashMap<String, String>> movieList = new ArrayList<HashMap<String, String>>();
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                HashMap<String, String> map = new HashMap<String, String>();
+                for (int i = 0; i < cursor.getColumnCount(); i++) {
+                    map.put(cursor.getColumnName(i), cursor.getString(i));
+                }
+                movieList.add(map);
+            } while (cursor.moveToNext());
+
+        }
+        movies_db.close();
+        return movieList;
+
+    }
+    public HashMap<String, String> movieMain(int movie_id) {
+        HashMap<String, String> movie = new HashMap<String, String>();
+        String selectQuery = "SELECT * FROM " + TABLE_MOVIES + " WHERE movie_id = " + movie_id;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor3 = db.rawQuery(selectQuery, null);
+
+        //Move the first row
+        cursor3.moveToFirst();
+        if (cursor3.getCount() > 0) {
+            movie.put(NAME, cursor3.getString(0));
+            movie.put(DIRECTOR, cursor3.getString(1));
+            movie.put(YEAR, cursor3.getString(2));
+            movie.put(WRITER, cursor3.getString(3));
+            movie.put(GENRE, cursor3.getString(4));
+            movie.put(GENRE_ID, cursor3.getString(5));
+            movie.put(MOVIE_ID, cursor3.getString(6));
+            movie.put(DETAILS, cursor3.getString(7));
+            movie.put(IMDB, cursor3.getString(8));
+            movie.put(STARS,cursor3.getString(9));
+            movie.put(DIRECTOR_ID,cursor3.getString(10));
+
+
+        }
+        cursor3.close();
+
+        db.close();
+        return movie;
 
     }
 

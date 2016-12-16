@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="b47359e54906ebde1f843b884ddea1410218f28f">
+        sha1="3e605e5df0d47f96c55c038d6c231d61a01d4d95">
         <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_acf7cb1b03d647c958f1ee3519ae2c8165bf5f3c\classes.dex" />
     </item>
     <item
@@ -241,7 +241,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="928ff629fd6702df5beee753b16c62632dca1c3e">
+        sha1="96e6f241c34956dc0cef157dd593d1bedde4a482">
         <dex dex="C:\Users\omerf\Documents\GitHub\MovieCollector\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_255006727e110df0ca0230e3f119a4934507f06b\classes.dex" />
     </item>
     <item
