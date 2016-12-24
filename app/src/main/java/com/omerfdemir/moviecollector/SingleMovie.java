@@ -1,9 +1,11 @@
 package com.omerfdemir.moviecollector;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -18,6 +20,7 @@ public class SingleMovie extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_movie);
+        ImageView img_view = (ImageView) findViewById(R.id.single_iv);
 
         TextView tv_imdb_score = (TextView) findViewById(R.id.tv_imdb);
         TextView tv_genre = (TextView) findViewById(R.id.tv_genre);
@@ -39,6 +42,11 @@ public class SingleMovie extends AppCompatActivity{
         tv_writers.setText(map.get("writer"));
         tv_stars.setText(map.get("stars"));
         tv_storyline.setText((map.get("details")));
-
+        //Resimleri çekmek
+       /* Resources resources = this.getResources();
+        final int resourceId = resources.getIdentifier(map.get("name"),
+                "drawable", this.getPackageName());
+        img_view.setImageResource(resourceId);*/
     }
+
 }

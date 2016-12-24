@@ -1,12 +1,17 @@
 package com.omerfdemir.moviecollector;
 
+import android.app.SearchManager;
 import android.content.Intent;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     ListView lv2;
     Random random = new Random();
     int movie_id = random.nextInt(660-1) + 1;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +65,13 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu,menu);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
+        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        return true;
+    }
 
     protected void onResume() {
         super.onResume();

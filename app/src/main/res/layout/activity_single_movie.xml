@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="250dp"
-            android:id="@+id/iv1"
+            android:id="@+id/single_iv"
             android:src="@drawable/image1"
             android:layout_weight="2"
             android:contentDescription="Movie of the Day"

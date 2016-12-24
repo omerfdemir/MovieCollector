@@ -1,13 +1,22 @@
 package com.omerfdemir.moviecollector;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -17,13 +26,14 @@ import java.util.HashMap;
  * Created by omerf on 14.11.2016.
  */
 
-public class Movies extends AppCompatActivity{
-    int genre_id,director_id,year_id;
-    String genre,director,year_name;
+public class Movies extends AppCompatActivity {
+    int genre_id, director_id, year_id;
+    String genre, director, year_name;
     ArrayAdapter<String> adapter;
     String[] movie_names;
-    int [] movie_ids;
+    int[] movie_ids;
     ListView lv;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +43,7 @@ public class Movies extends AppCompatActivity{
         genre = intent.getStringExtra("genre");
         director_id = intent.getIntExtra("director_id", 0);
         director = intent.getStringExtra("name");
-        year_id = intent.getIntExtra("year_id",0);
+        year_id = intent.getIntExtra("year_id", 0);
         year_name = intent.getStringExtra("year_name");
         if (genre_id != 0) {
             setTitle(genre);
@@ -61,8 +71,7 @@ public class Movies extends AppCompatActivity{
                     startActivity(intent);
                 }
             });
-        }
-        else if(director_id != 0){
+        } else if (director_id != 0) {
             setTitle(director);
             Database movies_db = new Database(getApplicationContext());
             ArrayList<HashMap<String, String>> movie_list = movies_db.directortoMovies(director_id);
@@ -88,8 +97,7 @@ public class Movies extends AppCompatActivity{
                     startActivity(intent);
                 }
             });
-        }
-        else if (year_id !=0){
+        } else if (year_id != 0) {
             setTitle(year_name);
             Database movies_db = new Database(getApplicationContext());
             ArrayList<HashMap<String, String>> movie_list = movies_db.yeartoMovies(year_id);
@@ -119,12 +127,57 @@ public class Movies extends AppCompatActivity{
     }
 
 
-    @Override
-    protected void onResume() {
 
 
-        super.onResume();
 
+
+        @Override
+        protected void onResume () {
+
+
+            super.onResume();
+
+
+        }
+
+
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(false);
+
+        SearchView.OnQueryTextListener textChangeListener = new SearchView.OnQueryTextListener()
+        {
+            @Override
+            public boolean onQueryTextChange(String newText)
+            {
+                // this is your adapter that will be filtered
+                adapter.getFilter().filter(newText.toString().trim());
+                System.out.println("on text chnge text: "+newText);
+                return true;
+            }
+            @Override
+            public boolean onQueryTextSubmit(String query)
+            {
+                // this is your adapter that will be filtered
+                adapter.getFilter().filter(query.toString().trim());
+                System.out.println("on query submit: "+query);
+                return true;
+            }
+        };
+        searchView.setOnQueryTextListener(textChangeListener);
+
+        return super.onCreateOptionsMenu(menu);
 
     }
 }
+
+
+
+
