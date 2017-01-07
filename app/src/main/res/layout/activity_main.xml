@@ -14,33 +14,36 @@
         android:layout_height="220dp"
         android:layout_columnSpan="2"
         android:layout_columnWeight="4"
+        android:weightSum="4"
+        android:paddingTop="20dp"
         >
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="250dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
             android:id="@+id/iv1"
-            android:src="@drawable/image1"
+            android:src="@drawable/captainamerica"
             android:layout_weight="2"
             android:contentDescription="Movie of the Day"
-            android:cropToPadding="false"
-            android:adjustViewBounds="false" />
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="0dp" />
 
 
         <LinearLayout
             android:layout_width="100dp"
-            android:layout_height="250dp"
+            android:layout_height="220dp"
             android:orientation="vertical"
-            android:layout_weight="2">
+            android:layout_weight="2"
+            android:layout_marginLeft="0dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Movie Name"
-                android:textSize="50dp"
+                android:textSize="25dp"
                 android:id="@+id/tv_movie_name"
                 android:textAlignment="center"/>
 
             <LinearLayout
-                android:layout_width="200dp"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -91,14 +94,21 @@
 
 
             </LinearLayout>
-
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
             <Button
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="30dp"
+
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/btn_details"
                 android:text="Details"
+                android:layout_height="wrap_content"
 
                 />
+            </RelativeLayout>
 
 
         </LinearLayout>
@@ -111,7 +121,9 @@
         android:orientation="vertical"
         android:layout_column="0"
         android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="0dp"
+        android:paddingBottom="40dp"
+ >
 
         <Button
             android:layout_width="match_parent"

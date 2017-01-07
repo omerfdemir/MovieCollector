@@ -2,8 +2,10 @@ package com.omerfdemir.moviecollector;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Movie;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -28,9 +30,19 @@ public class Categories extends AppCompatActivity {
     String[] category_names;
     int[] category_ids;
     ListView lv2;
+    SharedPreferences preferences ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        int theme = preferences.getInt("theme",1);
+        if (theme==0){
+            setTheme(R.style.AppThemeDark);
+        }
+        else{
+            setTheme(R.style.AppTheme);
+
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
         setTitle("Categories");

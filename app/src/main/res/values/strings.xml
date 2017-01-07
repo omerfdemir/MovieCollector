@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Movie Collector</string>
+    <string name="theme">1</string>
 </resources>

@@ -3,7 +3,9 @@ package com.omerfdemir.moviecollector;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
@@ -27,6 +30,7 @@ import java.util.HashMap;
  */
 
 public class Movies extends AppCompatActivity {
+    SharedPreferences preferences ;
     int genre_id, director_id, year_id;
     String genre, director, year_name;
     ArrayAdapter<String> adapter;
@@ -36,6 +40,15 @@ public class Movies extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        int theme = preferences.getInt("theme",1);
+        if (theme==0){
+            setTheme(R.style.AppThemeDark);
+        }
+        else{
+            setTheme(R.style.AppTheme);
+
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
         final Intent intent = getIntent();
@@ -100,7 +113,7 @@ public class Movies extends AppCompatActivity {
         } else if (year_id != 0) {
             setTitle(year_name);
             Database movies_db = new Database(getApplicationContext());
-            ArrayList<HashMap<String, String>> movie_list = movies_db.yeartoMovies(year_id);
+            final ArrayList<HashMap<String, String>> movie_list = movies_db.yeartoMovies(year_id);
             if (movie_list.size() == 0) {
                 Toast.makeText(getApplicationContext(), "There is no Database", Toast.LENGTH_LONG).show();
             } else {
@@ -117,14 +130,24 @@ public class Movies extends AppCompatActivity {
             }
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
+             /*   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    // HERE IS YOUR ITEM ID:):)
+                    int clickedItem=movie_list.indexOf(parent.getAdapter().getItem(position));
+                    Intent intent = new Intent(getApplicationContext(), SingleMovie.class);
+                    intent.putExtra("movie_id", clickedItem);
+                }
+            });*/
                 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                     Intent intent = new Intent(getApplicationContext(), SingleMovie.class);
                     intent.putExtra("movie_id", movie_ids[arg2]);
+
                     startActivity(intent);
                 }
             });
         }
     }
+
 
 
 
@@ -158,9 +181,19 @@ public class Movies extends AppCompatActivity {
             public boolean onQueryTextChange(String newText)
             {
                 // this is your adapter that will be filtered
-                adapter.getFilter().filter(newText.toString().trim());
+                Movies.this.adapter.getFilter().filter(newText.toString().trim());
+                adapter.notifyDataSetChanged();
+
+                int search_list[];
+                String search_list_name[];
                 System.out.println("on text chnge text: "+newText);
+
+
+
+
+
                 return true;
+
             }
             @Override
             public boolean onQueryTextSubmit(String query)
@@ -168,10 +201,19 @@ public class Movies extends AppCompatActivity {
                 // this is your adapter that will be filtered
                 adapter.getFilter().filter(query.toString().trim());
                 System.out.println("on query submit: "+query);
+                System.out.println(adapter);
+
                 return true;
             }
+
+
         };
+        lv = (ListView) findViewById(R.id.movies);
+        adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.li_tv, movie_names);
+        lv.setAdapter(adapter);
         searchView.setOnQueryTextListener(textChangeListener);
+
+
 
         return super.onCreateOptionsMenu(menu);
 

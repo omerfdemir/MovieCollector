@@ -1,7 +1,9 @@
 package com.omerfdemir.moviecollector;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,6 +22,7 @@ import static com.omerfdemir.moviecollector.R.id.toplist;
  */
 
 public class Toplist extends AppCompatActivity{
+    SharedPreferences preferences ;
     ArrayAdapter<String> adapter3;
     ArrayList<HashMap<String, String>> top_list;
     String[] movie_names;
@@ -28,6 +31,15 @@ public class Toplist extends AppCompatActivity{
     ListView lv3;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        int theme = preferences.getInt("theme",1);
+        if (theme==0){
+            setTheme(R.style.AppThemeDark);
+        }
+        else{
+            setTheme(R.style.AppTheme);
+
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toplist);
         setTitle("Toplist");

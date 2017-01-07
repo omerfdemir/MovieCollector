@@ -1,7 +1,9 @@
 package com.omerfdemir.moviecollector;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,6 +20,7 @@ import java.util.HashMap;
  */
 
 public class Directors extends AppCompatActivity{
+    SharedPreferences preferences ;
     ArrayAdapter<String> adapter4;
     ArrayList<HashMap<String, String>> director_list;
     String[] director_names;
@@ -25,6 +28,15 @@ public class Directors extends AppCompatActivity{
     ListView lv4;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        int theme = preferences.getInt("theme",1);
+        if (theme==0){
+            setTheme(R.style.AppThemeDark);
+        }
+        else{
+            setTheme(R.style.AppTheme);
+
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directors);
         setTitle("Directors");

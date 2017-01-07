@@ -13,4 +13,11 @@
         android:title="Search"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="ifRoom|collapseActionView" />
+    <item android:id="@+id/action_about_us"
+        android:title="About Us"
+        />
+    <item android:id="@+id/action_contact"
+        android:title="Contact"
+        />
+
 </menu>
