@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginLeft="75dp"
+
         android:id="@+id/radioButtonLight" />
 
     <RadioButton
@@ -25,5 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginLeft="75dp"
+
         android:id="@+id/radioButtonDark" />
 </LinearLayout>

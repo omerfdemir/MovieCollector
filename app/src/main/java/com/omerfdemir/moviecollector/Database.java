@@ -458,5 +458,15 @@ public class Database extends android.database.sqlite.SQLiteOpenHelper {
         movies_db.close();
 
     }
+    public void changeWatch(int movie_id){
+        SQLiteDatabase movies_db = this.getWritableDatabase();
+        movies_db.delete(TABLE_WATCH, MOVIE_ID +"="+movie_id,null);
+        addWatch(movie_id,"Watched");
+
+
+
+
+
+    }
 
 }

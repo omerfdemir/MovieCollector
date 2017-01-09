@@ -21,15 +21,21 @@ public class Settings extends Activity implements View.OnClickListener {
 
 
     public void onCreate(Bundle savedInstanceState)
-    {
+    { super.onCreate(savedInstanceState);
+        rbDark = (RadioButton) findViewById(R.id.radioButtonDark);
+        rbLight = (RadioButton) findViewById(R.id.radioButtonLight);
         preferences  = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        super.onCreate(savedInstanceState);
+
+
+        int theme = preferences.getInt("theme",1);
+
         editor = preferences.edit();
         editor.putInt("theme",1);
         setContentView(R.layout.activity_settings);
 
         findViewById(R.id.radioButtonDark).setOnClickListener(this);
         findViewById(R.id.radioButtonLight).setOnClickListener(this);
+
     }
     @Override
     public void onClick(View v)
@@ -38,17 +44,21 @@ public class Settings extends Activity implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.radioButtonLight:
+
                 editor.putInt("theme",1);
                 editor.commit();
                 Toast.makeText(getApplicationContext(),"Please restart the application to applying changes",Toast.LENGTH_LONG).show();
+
                 break;
             case R.id.radioButtonDark:
+
                 editor.putInt("theme",0);
                 editor.commit();
                 Toast.makeText(getApplicationContext(),"Please restart the application to applying changes",Toast.LENGTH_LONG).show();
                 break;
 
         }
+
     }
 }
 

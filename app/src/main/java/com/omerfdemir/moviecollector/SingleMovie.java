@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -73,7 +74,7 @@ public class SingleMovie extends AppCompatActivity{
                 "drawable", this.getPackageName());
         img_view.setImageResource(resourceId);
 
-        Database movies_db = new Database(getApplicationContext());
+       Database movies_db = new Database(getApplicationContext());
 
         ArrayList<HashMap<String, String>> watched_movie_list = movies_db.watchedMovies();
 
@@ -127,36 +128,53 @@ public class SingleMovie extends AppCompatActivity{
     }
 
 
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         final Database movies_db = new Database(getApplicationContext());
-        Button btn_will= (Button) findViewById(R.id.iwillwatch);
+        Button btn_will = (Button) findViewById(R.id.iwillwatch);
         Button btn_watched = (Button) findViewById(R.id.ihavewatched);
+        final Intent refresh = new Intent(this,SingleMovie.class);
+        refresh.putExtra("movie_id",movie_id);
 
 
-        if (watch=="Watched"){
+        if (watch == "Watched") {
             btn_watched.setVisibility(View.GONE);
             btn_will.setVisibility(View.GONE);
-        }
-        else if (watch=="Watchlist"){
+
+        } else if (watch == "Watchlist") {
             btn_will.setVisibility(View.GONE);
+            btn_watched.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(refresh);
+
+
+                    movies_db.changeWatch(movie_id);
+                    Toast.makeText(getApplicationContext(), "Movie has been added to your Watched Movies List", Toast.LENGTH_LONG).show();
+                }
+            });
+
+        } else if (watch == null) {
+            btn_will.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(refresh);
+                    movies_db.addWatch(movie_id, "Watchlist");
+                    Toast.makeText(getApplicationContext(), "Movie has been added to your Watchlist", Toast.LENGTH_LONG).show();
+                }
+            });
+            btn_watched.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    movies_db.addWatch(movie_id, "Watched");
+                    startActivity(refresh);
+
+                    Toast.makeText(getApplicationContext(), "Movie has been added to your Watched Movies List", Toast.LENGTH_LONG).show();
+                }
+            });
 
         }
-        btn_will.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                movies_db.addWatch(movie_id,"Watchlist");
-                Toast.makeText(getApplicationContext(),"Movie has been added to your Watchlist",Toast.LENGTH_LONG).show();
-            }
-        });
-        btn_watched.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                movies_db.addWatch(movie_id,"Watched");
-                Toast.makeText(getApplicationContext(),"Movie has been added to your Watched Movies List",Toast.LENGTH_LONG).show();
-            }
-        });
-
     }
+
 
 }

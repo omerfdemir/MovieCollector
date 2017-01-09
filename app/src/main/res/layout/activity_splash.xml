@@ -5,9 +5,17 @@
     <ImageView
         android:id="@+id/img_logo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:layout_gravity="center"
         android:src="@drawable/logo"
         />
+    <ProgressBar
+        android:id="@+id/my_progress_bar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+
+
+    />
 
 </LinearLayout>
